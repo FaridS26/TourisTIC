@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sitio 1</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">TourisTIC</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'Index' %}">Inicio</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Regiones</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Amazonía</a></li>
+              <li><a class="dropdown-item" href="{% url 'Region_andina' %}">Andina</a></li>
+              <li><a class="dropdown-item" href="#">Caribe</a></li>
+              <li><a class="dropdown-item" href="#">Orinoquía</a></li>
+              <li><a class="dropdown-item" href="#">Pacífica</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Mi Perfil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'Contacto' %}">Contacto</a>
+            <li class="nav-item">
+            <a class="nav-link" href="{% url 'Login' %}">Cerrar sesion</a>
+          </li>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container my-3">
+    <div class="row align-items-center">
+      <div class="col">
+        <p class="display-3">Nombre del Sitio Turístico 1</p class="display-3">
+      </div>
+      <div class="col">
+        <img src="https://encolombia.com/wp-content/uploads/2020/05/Regi%C3%B3n-Andina.jpg"
+          alt="Imagen Sitio Turístico 1" class="img-fluid">
+      </div>
+    </div>
+  </div>
+  <p class="container h4 my-3">
+    Breve descripcion del sitio turistico
+  </p>
+  <hr>
+  <div class="container">
+    <h2>
+      Algunos videos acerca de este sitio turístico
+    </h2>
+    <hr>
+    <div class="ratio ratio-16x9">
+      <iframe src="https://www.youtube.com/embed/U7xlrylG3g8" title="YouTube video" allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="container my-5">
+    <h2>
+      ¿Cómo se puede llegar a este sitio?
+    </h2>
+    <hr>
+    <div class="row">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1014806.5905485481!2d-72.74215092568977!3d6.510513981690817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e693a1b5a377c2f%3A0xd2d2f62232a9a04b!2sParque%20Nacional%20Natural%20El%20Cocuy!5e0!3m2!1ses!2sco!4v1663341008893!5m2!1ses!2sco"
+        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-100"
+        height="500" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </div>
+  <div class="container d-flex justify-content-md-end mb-4">
+    <button type="button" class="btn btn-outline-primary">
+      <i class="bi bi-plus-circle-dotted"></i>
+      Agregar a mis rutas
+    </button>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
