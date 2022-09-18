@@ -1,0 +1,29 @@
+.img {
+  width: 400px;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+.login {
+  width: 500px;
+  margin-top: 150px;
+  margin-left: 150px;
+}
+.Header_img{
+  width: 100px;
+  margin-top: 10px;
+  margin-left: 10px
+}
+.Header_title{
+  width: 50px;
+  margin-top: 60px;
+  margin-left: 10px 
+}
+
+.section-title{
+  display:flex;
+}
+
+.section-title img{
+  width:30%;
+}
