@@ -1,0 +1,43 @@
+{% extends 'Crud/base.html'%}
+{% block title %}
+Mi perfil
+{% endblock %}
+{% block contenido %}
+{% load static%}
+<div class="container">
+  <h2>Mis Rutas</h2>
+  <br>
+  <div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Nombre ruta</th>
+          <th scope="col">Precio</th>
+          <th scope="col">Ubicación</th>
+          <th scope="col">Eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Ruta 1</th>
+          <td>$0</td>
+          <td>mapa</td>
+          <td>eliminar</td>
+        </tr>
+        <tr>
+          <th scope="row">Ruta 2</th>
+          <td>$2000</td>
+          <td>mapa</td>
+          <td>eliminar</td>
+        </tr>
+        <tr>
+          <th scope="row">Ruta 3</th>
+          <td>$3000</td>
+          <td>mapa</td>
+          <td>eliminar</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
