@@ -1,0 +1,48 @@
+{% extends 'Crud/base.html'%}
+{% block title %}
+Sitio1
+{% endblock %}
+{% block contenido %}
+<div class="container my-3">
+  <div class="row align-items-center">
+    <div class="col">
+      <p class="display-3">Nombre del Sitio Turístico 1</p class="display-3">
+    </div>
+    <div class="col">
+      <img src="https://encolombia.com/wp-content/uploads/2020/05/Regi%C3%B3n-Andina.jpg" alt="Imagen Sitio Turístico 1"
+        class="img-fluid">
+    </div>
+  </div>
+</div>
+<p class="container h4 my-3">
+  Breve descripcion del sitio turistico
+</p>
+<hr>
+<div class="container">
+  <h2>
+    Algunos videos acerca de este sitio turístico
+  </h2>
+  <hr>
+  <div class="ratio ratio-16x9">
+    <iframe src="https://www.youtube.com/embed/U7xlrylG3g8" title="YouTube video" allowfullscreen></iframe>
+  </div>
+</div>
+<div class="container my-5">
+  <h2>
+    ¿Cómo se puede llegar a este sitio?
+  </h2>
+  <hr>
+  <div class="row">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1014806.5905485481!2d-72.74215092568977!3d6.510513981690817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e693a1b5a377c2f%3A0xd2d2f62232a9a04b!2sParque%20Nacional%20Natural%20El%20Cocuy!5e0!3m2!1ses!2sco!4v1663341008893!5m2!1ses!2sco"
+      style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-100"
+      height="500" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+</div>
+<div class="container d-flex justify-content-md-end mb-4">
+  <button type="button" class="btn btn-outline-primary">
+    <i class="bi bi-plus-circle-dotted"></i>
+    Agregar a mis rutas
+  </button>
+</div>
+{% endblock %}

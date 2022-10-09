@@ -1,0 +1,24 @@
+{% extends 'Crud/base.html'%}
+{% block title %}
+Contacto
+{% endblock %}
+{% block contenido %}
+{% load crispy_forms_tags %}
+<div class="container">
+  <p class="h3 mt-4">
+    Si tienes dudas o ha presentado algun problema en la plataforma, lo invitamos a que llene el
+    siguiente formulario con sus dudas
+  </p>
+  <hr width="90%">
+  <form method="POST">
+    <div class="container">
+      {% csrf_token %}
+      {{ form | crispy }}
+      <div class="d-flex justify-content-md-end">
+        <input type="submit" class="btn btn-outline-primary" value="Enviar">
+      </div>
+    </div>
+
+  </form>
+</div>
+{% endblock %}

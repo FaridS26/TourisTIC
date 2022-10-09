@@ -1,0 +1,65 @@
+{% extends 'Crud/base.html'%}
+{% block title %}
+Región Andina
+{% endblock %}
+
+
+
+{% block contenido %}
+<div class="container my-3">
+  <div class="row align-items-center">
+    <div class="col">
+      <p class="display-3">Bienvenidos a la región Andina</p class="display-3">
+    </div>
+    <div class="col">
+      <img src="https://encolombia.com/wp-content/uploads/2020/05/Regi%C3%B3n-Andina.jpg"
+        alt="Imagen inicial Region Andina" class="img-fluid">
+    </div>
+  </div>
+</div>
+<hr>
+<div class="container-fluid">
+  <h2>
+    Los sitios turisticos más importantes
+  </h2>
+</div>
+<hr width="80%">
+<div class="text-center mx-4">
+  <div class="row">
+    <div class="col">
+      <a href="{% url 'Sitio1' %}">
+        <img src="https://www.sitiosturisticoscolombia.com/wp-content/uploads/pico-nevado-el-cocuy.jpg"
+          alt="Imagen Sitio 1" class="img-fluid">
+      </a>
+      <h3>Sitio 1</h3>
+    </div>
+    <div class="col">
+      <img src="https://www.sitiosturisticoscolombia.com/wp-content/uploads/pico-nevado-el-cocuy.jpg"
+        alt="Imagen Sitio 2" class="img-fluid">
+      <h3>Sitio 2</h3>
+    </div>
+    <div class="col">
+      <img src="https://www.sitiosturisticoscolombia.com/wp-content/uploads/pico-nevado-el-cocuy.jpg"
+        alt="Imagen Sitio 3" class="img-fluid">
+      <h3>Sitio 3</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <img src="https://www.sitiosturisticoscolombia.com/wp-content/uploads/pico-nevado-el-cocuy.jpg"
+        alt="Imagen Sitio 4" class="img-fluid">
+      <h3>Sitio 4</h3>
+    </div>
+    <div class="col">
+      <img src="https://www.sitiosturisticoscolombia.com/wp-content/uploads/pico-nevado-el-cocuy.jpg"
+        alt="Imagen Sitio 5" class="img-fluid">
+      <h3>Sitio 5</h3>
+    </div>
+    <div class="col">
+      <img src="https://www.sitiosturisticoscolombia.com/wp-content/uploads/pico-nevado-el-cocuy.jpg"
+        alt="Imagen Sitio 6" class="img-fluid">
+      <h3>Sitio 6</h3>
+    </div>
+  </div>
+</div>
+{% endblock %}

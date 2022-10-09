@@ -1,0 +1,55 @@
+{% extends 'Crud/base.html'%}
+{% block title %}
+Inicio
+{% endblock %}
+{% block contenido %}
+{% load static %}
+<div class="container">
+  <div class="row align-items-center">
+    <div class="col">
+      <p class="display-5">
+        Ofrecemos la solución ideal para aquellos turistas nacionales e internacionales que quieran conocer más de
+        Colombia
+      </p>
+    </div>
+    <div class="col">
+      <img src="{% static 'Crud/img/main.jpg' %}" alt="Imagen Inicio" class="img-fluid">
+    </div>
+  </div>
+</div>
+<hr>
+<div class="container">
+  <h2>
+    Algunos sitios recomendados
+  </h2>
+  <hr width="80%">
+</div>
+
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+  <div class="carousel-inner">
+    {% for sitio in sitios %}
+    <div class="carousel-item active">
+      <a href="/region-{{ sitio.region }}/{{ sitio.nombre }}">
+        <img src="{{ sitio.imagen }}" class="d-block w-100" style="height: 600px;" alt="{{ sitio.nombre }}">
+      </a>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>{{ sitio.nombre }}</h5>
+        <p>{{ sitio.description|truncatechars:100 }}</p>
+
+      </div>
+    </div>
+    {% endfor%}
+
+
+
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+{% endblock %}
