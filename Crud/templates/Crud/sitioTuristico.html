@@ -1,0 +1,64 @@
+{% extends 'Crud/base.html' %}
+{% block title %}
+{{ posts.nombre }}
+{% endblock %}
+{% block contenido %}
+<div class="container my-3">
+  <div class="row align-items-center">
+    <div class="col">
+      <p class="display-3">{{ posts.nombre }}</p class="display-3">
+    </div>
+    <div class="col">
+      <img src="{{ posts.imagen }}" alt="Imagen Sitio {{ posts.nombre }}" class="img-fluid">
+    </div>
+  </div>
+</div>
+<p class="container h4 my-3">
+  Breve descripción del sitio turístico
+</p>
+<p class="container">
+  {{ posts.description }}
+</p>
+<hr>
+<div class="container">
+  <h2>
+    Algunos videos acerca de este sitio turístico
+  </h2>
+  <hr>
+  <div class="ratio ratio-16x9">
+    <iframe src="{{ posts.video }}" title="Video {{ posts.nombre }}" allowfullscreen></iframe>
+  </div>
+</div>
+<div class="container my-5">
+  <h2>
+    ¿Cómo se puede llegar a este sitio?
+  </h2>
+  <hr>
+  <div class="row">
+    <iframe src="{{ posts.ubicacion }}" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade" class="w-100" height="500" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+
+</div>
+
+<div class="container my-5">
+  <h2>
+    Precio
+  </h2>
+  <hr>
+  <div class="row">
+    {{ posts.precio }}
+  </div>
+
+</div>
+
+<div class="container d-flex justify-content-md-end mb-4">
+  <form method="Post">
+    {% csrf_token %}
+    <button action="#" type="submit" class="btn btn-outline-primary">
+      <i class=" bi bi-plus-circle-dotted"></i>
+      Agregar a mis rutas
+    </button>
+  </form>
+</div>
+{% endblock %}
